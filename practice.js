@@ -361,3 +361,125 @@ const maxSpeed = {
 const sortable = Object.entries(maxSpeed)
 console.log('object enteries', sortable.sort((a, b) => { return a[1] - b[1] }))
 console.log('object enteries', Object.fromEntries(sortable.sort((a, b) => { return b[1] - a[1] })))
+
+
+const maxSpeed2 = {
+    car: 300,
+    bike: 60,
+    motorbike: 200,
+    airplane: 1000,
+    helicopter: 400,
+    rocket: 8 * 60 * 60
+};
+
+console.log('this is convert object to array', Array.from(maxSpeed2))
+
+
+
+
+
+const myObj = { a: 1, b: 2, c: 3 };
+const arrayOfEntries = Object.entries(myObj);
+console.log(arrayOfEntries);
+// [['a', 1], ['b', 2], ['c', 3]]
+
+
+
+
+
+
+const myObj2 = { a: 1, b: 2, c: 3 };
+const keysArray = Object.keys(myObj2);
+console.log(keysArray);
+
+const valuesArray = Object.values(myObj2);
+console.log(valuesArray);
+// ['a', 'b', 'c'] // keysArray
+// [1, 2, 3] // valuesArray
+
+
+
+const myObj3 = { a: 1, b: 2, c: 3 };
+
+const customArray = Object.keys(myObj3).map(key => ({ key, value: myObj3[key] }));
+console.log(customArray);
+// [{ key: 'a', value: 1 }, { key: 'b', value: 2 }, { key: 'c', value: 3 }]
+
+
+
+
+const input23 = [5, 7, 9, 11, 15, 17, 17, 5, 5, 5, 5];
+const occurrencesObject = input23.reduce((intialValue, value, index) => {
+    intialValue[index] = value
+    return intialValue
+}, {})
+console.log('this is array to object', occurrencesObject);
+// this is array to object {
+//     '0': 5,
+//     '1': 7,
+//     '2': 9,
+//     '3': 11,
+//     '4': 15,
+//     '5': 17,
+//     '6': 17,
+//     '7': 5,
+//     '8': 5,
+//     '9': 5,
+//     '10': 5
+//   }
+
+
+// const subSumArray = [20, 15, 11, 18, 24]
+// array k sub element ko sum karna hai usi index ko chor kar
+const arraySum = [2, 7, 11, 4, -2]
+const createdArrayForSum = []
+for (var j = 0; j <= arraySum.length - 1; j++) {
+    const selectedItem = arraySum[j]
+    var arraySumthis = 0;
+    for (var i = 0; i <= arraySum.length - 1; i++) {
+        arraySumthis = arraySumthis + arraySum[i]
+    }
+    createdArrayForSum.push(arraySumthis - selectedItem)
+}
+console.log('getted array', createdArrayForSum)
+
+// getted array [ 20, 15, 11, 18, 24 ]
+
+
+const firstObject = { n: 1, b: 55, c: 3, d: 102, e: 122 };
+const secondObject = { a: 1, e: 12, b: 55 };
+
+
+let objectss = {}
+for (let i in firstObject) {
+    if (firstObject[i] == secondObject[i]) {
+        objectss[i] = firstObject[i]
+    }
+}
+
+console.log(objectss)
+
+// { b: 55 }
+
+
+const forheightestarray = [100,20, 15, 11, 18, 24, 21,44,76]
+
+var firstHeighest = 0
+var secondHeighest = 0
+
+
+for (var i = 0; i <= forheightestarray.length; i++) {
+
+    if (forheightestarray[i] > firstHeighest) {
+        secondHeighest = firstHeighest
+
+        firstHeighest = forheightestarray[i]
+    }
+    else if (forheightestarray[i] > secondHeighest && forheightestarray[i] < firstHeighest) {
+        secondHeighest = forheightestarray[i]
+
+    }
+
+}
+
+console.log('second heighest Number', secondHeighest)
