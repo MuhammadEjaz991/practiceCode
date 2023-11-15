@@ -462,7 +462,7 @@ console.log(objectss)
 // { b: 55 }
 
 
-const forheightestarray = [100,20, 15, 11, 18, 24, 21,44,76]
+const forheightestarray = [100, 20, 15, 11, 18, 24, 21, 44, 76]
 
 var firstHeighest = 0
 var secondHeighest = 0
@@ -483,3 +483,77 @@ for (var i = 0; i <= forheightestarray.length; i++) {
 }
 
 console.log('second heighest Number', secondHeighest)
+
+
+
+const funcSpeard = (...rest) => {
+
+    [a, ...b] = rest
+
+    console.log('this is rest operator', b)
+
+}
+
+
+const arrayNumber = [1, 2, 3]
+funcSpeard(...arrayNumber)
+
+
+
+
+const reverseByWord = 'this is javascript code'
+
+
+const stringToArray = reverseByWord.split(' ')
+var start = 0
+var end = stringToArray.length - 1
+while (start < end) {
+    console.log('tshi')
+
+    var temp = stringToArray[start]
+    stringToArray[start] = stringToArray[end]
+    stringToArray[end] = temp
+    start++
+    end--
+
+}
+
+console.log('this is awesome', stringToArray.join(' '))
+
+
+const palindrome = "deified open radar level rotor noon"
+
+const palindromeArray = palindrome.split(' ')
+
+
+console.log(palindromeArray)
+
+
+// const palindromeArrayFilter = palindromeArray.filter((element) => {
+
+//     const reserveElment = element.split('').reverse().join('')
+//     if (reserveElment == element) {
+//         return element
+//     }
+
+
+// })
+
+const palindromeArrayFilter = palindromeArray.filter((element) => {
+
+    const reserveElment = element.split('')
+    var start = 0
+    var end = reserveElment.length - 1
+    while (start < end) {
+        var temp = reserveElment[start]
+        reserveElment[start] = reserveElment[end]
+        reserveElment[end] = temp
+        start++
+        end--
+    }
+    if (reserveElment.join('') == element) {
+        return element
+    }
+})
+
+console.log('this is array which is palidropme', palindromeArrayFilter.join(' '))
