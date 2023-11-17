@@ -557,3 +557,49 @@ const palindromeArrayFilter = palindromeArray.filter((element) => {
 })
 
 console.log('this is array which is palidropme', palindromeArrayFilter.join(' '))
+
+
+
+const firstArray = [1, 5, 3, 55, 33,]
+const secondArray = [1, 2, 3, 22, 33]
+const resultArray = []
+
+
+for (var i = 0; i < firstArray.length; i++) {
+    if (secondArray.includes(firstArray[i])) {
+        console.log('this')
+    }
+    else {
+        resultArray.push(firstArray[i])
+    }
+    if (firstArray.includes(secondArray[i])) {
+    }
+    else {
+        resultArray.push(secondArray[i])
+    }
+}
+
+
+console.log('result array', resultArray)
+
+
+
+const forSum = [1,2,3,4,5,6,7,13,7,1]
+var backsum = 0;
+
+for (var i = 0; i < forSum.length; i++) {
+
+    var innerSUm = 0;
+    for (var j = i ; j < forSum.length; j++) {
+        innerSUm = innerSUm + forSum[j]
+    }
+    backsum = backsum + forSum[i]
+    console.log('this is number back', backsum)
+    console.log('this is number front', innerSUm)
+    if (innerSUm == backsum) {
+        console.log('this is equal', forSum[i])
+    }
+    else {
+        console.log('this is not equal')
+    }
+}
