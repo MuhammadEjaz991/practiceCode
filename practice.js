@@ -584,13 +584,13 @@ console.log('result array', resultArray)
 
 
 
-const forSum = [1,2,3,4,5,6,7,13,7,1]
+const forSum = [1, 2, 3, 4, 5, 6, 7, 13, 7, 1]
 var backsum = 0;
 
 for (var i = 0; i < forSum.length; i++) {
 
     var innerSUm = 0;
-    for (var j = i ; j < forSum.length; j++) {
+    for (var j = i; j < forSum.length; j++) {
         innerSUm = innerSUm + forSum[j]
     }
     backsum = backsum + forSum[i]
@@ -603,3 +603,32 @@ for (var i = 0; i < forSum.length; i++) {
         console.log('this is not equal')
     }
 }
+
+
+const passingFunc = (b, c) => {
+    b = 11
+    c[0] = 9
+}
+var a = 3
+var arry = [1, 2]
+passingFunc(a, arry)
+
+
+
+const accurranceArray = [2, 2, 3, 4, 4, 52, 3]
+
+const accurranceObject = {}
+
+
+for (var i = 0; i < accurranceArray.length; i++) {
+    if (accurranceObject[accurranceArray[i]]) {
+        accurranceObject[accurranceArray[i]]++
+
+    }
+    else {
+        accurranceObject[accurranceArray[i]] = 1
+    }
+}
+
+
+console.log(accurranceObject[2])
