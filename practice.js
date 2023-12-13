@@ -43,18 +43,12 @@ for (var i = 0; i < array.length; i++) {
         randomNumber = array[i]
     }
 }
-console.log(randomNumber)
-
-
+console.log('this is minimum number', randomNumber)
 const numbers1 = [45, 433, 9, 16, 25];
-
 const maxlength = numbers1.find((item) => {
-
     return item > numbers1.length
-
 }
 )
-
 console.log(maxlength, 'max length')
 
 
@@ -70,7 +64,7 @@ const fruitss = ["Banana", "Orange", "Apple", "Mango"];
 const f = fruitss.entries();
 
 for (let x of f) {
-    console.log(x)
+    console.log('this is from enteries', x)
 }
 
 
@@ -95,8 +89,6 @@ console.log(' our return value', mappedArray)
 const RandomNumber = Math.random()
 console.log('random Number', RandomNumber * 11)
 
-
-
 const person = { fname: "John", lname: "Doe", age: 25 };
 let combineText = ''
 for (x in person) {
@@ -104,16 +96,13 @@ for (x in person) {
 }
 
 const numbers = [1, 2, 3, 4, 4, 2, 1];
-
 // Create a Set from the numbers array
 const uniqueNumbersSet = new Set(numbers);
-
 console.log(uniqueNumbersSet);
 // Output: Set(4) { 1, 2, 3, 4 }
-
 // If you want to convert it back to an array:
 const uniqueNumbersArray = Array.from(uniqueNumbersSet);
-console.log(uniqueNumbersArray);
+console.log('array.from of object', uniqueNumbersArray);
 // Output: [1, 2, 3, 4]
 const wwww = ["Banana", "Orange", "Apple", "Mango"];
 const wwwf = wwww.entries();
@@ -122,11 +111,6 @@ console.log(wwwf, 'this')
 // wwwf.map((val)=>{
 // console.log('this is value', val)
 // })
-
-
-
-
-
 class car {
     constructor(name) {
         this.name = name
@@ -146,8 +130,6 @@ class dog extends car {
 
 const myCar = new dog('ejaz', 'axel')
 console.log('my car', myCar.present())
-
-
 
 x = 5
 y = 10
@@ -178,7 +160,6 @@ var heightestNumber = Number.MIN_VALUE
 var secondheightestNumber = Number.MIN_VALUE
 
 for (var i = 0; i < arrayAwesome.length; i++) {
-
     if (arrayAwesome[i] > heightestNumber) {
         secondheightestNumber = heightestNumber
         heightestNumber = arrayAwesome[i]
@@ -190,11 +171,8 @@ for (var i = 0; i < arrayAwesome.length; i++) {
 console.log('heigtestNumber', heightestNumber)
 console.log('secondHeightest', secondheightestNumber)
 
-
 const sortedArray = [1, 3, 5, 7, 8, 9];
 var value = 9
-
-
 var start = 0
 var end = sortedArray.length - 1
 var findNumber;
@@ -213,7 +191,6 @@ while (start <= end) {
     }
 }
 console.log('finded Number is', findNumber)
-
 const bubble = [11, 31, 9, 7, 8, 2];
 for (var j = 0; j < bubble.length; j++) {
     for (var i = 0; i < bubble.length; i++) {
@@ -224,9 +201,7 @@ for (var j = 0; j < bubble.length; j++) {
         }
 
     }
-
 }
-
 let someAsyncFunction = () => {
     console.log('this is someasync')
 }
@@ -235,23 +210,13 @@ const myFunction = async () => {
     setTimeout(() => {
         console.log("Timeout executed after 3 seconds");
     }, 0);
-
     // Await something
     await someAsyncFunction();
-
     // Console after await
     console.log("Console after await");
 };
 
-
-
-
 myFunction()
-
-
-
-
-
 
 
 function OuterFunc() {
@@ -277,24 +242,17 @@ outputOfOuterFunc()
 
 
 var a = 5
-
 for (var i = 1; i <= 5 - 1; i++) {
     a = a * i
 }
 console.log('this is Factorial', a)
-
-
-
 const fabonaci = [0, 1]
-
 for (var i = 0; i <= 5; i++) {
     fabonaci.push(fabonaci[i] + fabonaci[i + 1])
 }
 console.log('this is fabonaci', fabonaci)
-
 const input = [5, 7, 9, 11, 15, 17]
 var output;
-
 for (var i = 0; i <= input.length - 1; i++) {
     if (input[i] + 2 != input[i + 1]) {
         console.log('ejaz')
@@ -304,14 +262,9 @@ for (var i = 0; i <= input.length - 1; i++) {
 }
 console.log('this is output', output)
 
-
-
-
 const input2 = [5, 7, 9, 11, 15, 17, 17, 5, 5, 5, 5];
-
 function countOccurrences(arr) {
     const occurrenceMap = {};
-
     arr.forEach(item => {
         if (occurrenceMap[item]) {
             occurrenceMap[item]++;
@@ -319,27 +272,20 @@ function countOccurrences(arr) {
             occurrenceMap[item] = 1;
         }
     });
-
     return occurrenceMap;
 }
 
 const occurrences = countOccurrences(input2);
 console.log(occurrences);
-console.log('this is output22', Object.entries(occurrences).sort((a, b) => { return b[1] - a[1] }))
-
+console.log('this is output22', (Object.entries(occurrences).sort((a, b) => { return b[1] - a[1] })).flat())
 const stingArray = 'thiss is javascript code'
 const arraySting = stingArray.split(' ')
 console.log(arraySting)
-
 const reversearray = arraySting.map((item) => {
     return (item.split('').reverse().join(''))
 
 })
 console.log('this is reverse', reversearray.join(" "))
-
-
-
-
 const stingArray2 = 'thiss is javascript code'
 
 
@@ -403,11 +349,8 @@ const myObj3 = { a: 1, b: 2, c: 3 };
 
 const customArray = Object.keys(myObj3).map(key => ({ key, value: myObj3[key] }));
 console.log(customArray);
+
 // [{ key: 'a', value: 1 }, { key: 'b', value: 2 }, { key: 'c', value: 3 }]
-
-
-
-
 const input23 = [5, 7, 9, 11, 15, 17, 17, 5, 5, 5, 5];
 const occurrencesObject = input23.reduce((intialValue, value, index) => {
     intialValue[index] = value
@@ -487,23 +430,14 @@ console.log('second heighest Number', secondHeighest)
 
 
 const funcSpeard = (...rest) => {
-
     [a, ...b] = rest
-
     console.log('this is rest operator', b)
 
 }
-
-
 const arrayNumber = [1, 2, 3]
 funcSpeard(...arrayNumber)
 
-
-
-
 const reverseByWord = 'this is javascript code'
-
-
 const stringToArray = reverseByWord.split(' ')
 var start = 0
 var end = stringToArray.length - 1
@@ -519,13 +453,8 @@ while (start < end) {
 }
 
 console.log('this is awesome', stringToArray.join(' '))
-
-
 const palindrome = "deified open radar level rotor noon"
-
 const palindromeArray = palindrome.split(' ')
-
-
 console.log(palindromeArray)
 
 
@@ -540,7 +469,6 @@ console.log(palindromeArray)
 // })
 
 const palindromeArrayFilter = palindromeArray.filter((element) => {
-
     const reserveElment = element.split('')
     var start = 0
     var end = reserveElment.length - 1
@@ -555,15 +483,11 @@ const palindromeArrayFilter = palindromeArray.filter((element) => {
         return element
     }
 })
-
 console.log('this is array which is palidropme', palindromeArrayFilter.join(' '))
-
-
 
 const firstArray = [1, 5, 3, 55, 33,]
 const secondArray = [1, 2, 3, 22, 33]
 const resultArray = []
-
 
 for (var i = 0; i < firstArray.length; i++) {
     if (secondArray.includes(firstArray[i])) {
@@ -578,11 +502,7 @@ for (var i = 0; i < firstArray.length; i++) {
         resultArray.push(secondArray[i])
     }
 }
-
-
 console.log('result array', resultArray)
-
-
 
 const forSum = [1, 2, 3, 4, 5, 6, 7, 13, 7, 1]
 var backsum = 0;
@@ -594,13 +514,13 @@ for (var i = 0; i < forSum.length; i++) {
         innerSUm = innerSUm + forSum[j]
     }
     backsum = backsum + forSum[i]
-    console.log('this is number back', backsum)
-    console.log('this is number front', innerSUm)
+    // console.log('this is number back', backsum)
+    // console.log('this is number front', innerSUm)
     if (innerSUm == backsum) {
         console.log('this is equal', forSum[i])
     }
     else {
-        console.log('this is not equal')
+        // console.log('this is not equal')
     }
 }
 
@@ -613,12 +533,8 @@ var a = 3
 var arry = [1, 2]
 passingFunc(a, arry)
 
-
-
 const accurranceArray = [2, 2, 3, 4, 4, 52, 3]
-
 const accurranceObject = {}
-
 
 for (var i = 0; i < accurranceArray.length; i++) {
     if (accurranceObject[accurranceArray[i]]) {
@@ -629,6 +545,394 @@ for (var i = 0; i < accurranceArray.length; i++) {
         accurranceObject[accurranceArray[i]] = 1
     }
 }
-
-
 console.log(accurranceObject[2])
+
+var sum = 10
+const arraySumPair = [1, 2, 3, 4, 5, 6, 7, 1, 8, 9, 9]
+
+for (var j = 0; j < arraySumPair.length; j++) {
+    for (var i = 0; i < arraySumPair.length - j; i++) {
+        if (arraySumPair[j] + arraySumPair[i] == sum) {
+            console.log('this is pair', arraySumPair[j], arraySumPair[i])
+        }
+    }
+}
+
+const arraySumPairArray = arraySumPair.forEach((value, index) => {
+    if (arraySumPair.indexOf(value) !== index) {
+        arraySumPair.splice(index, 1)
+    }
+})
+console.log('duplicate value', arraySumPair)
+
+
+
+const DuplicateNumbers = [1, 2, 3, 4, 5, 5, 6, 7, 1, 8, 9, 5, 33, 1, 22, 1, 5, 5, 5, 5, 5]
+
+const duplicateArrayRemove = DuplicateNumbers.filter((value, index, array) => {
+
+    return array.indexOf(value) === index
+
+
+})
+
+console.log('duplicate remove', duplicateArrayRemove)
+
+const minn = Number.MAX_VALUE
+console.log('the value is:', minn)
+
+
+
+
+let sssss = ['a', 'b', 'c'];
+
+for (let index of sssss) {
+    console.log(index); // Outputs indices: 0, 1, 2
+}
+
+
+
+let sssssss = ['a', 'b', 'c'];
+let iterator = sssssss.entries();
+const desireObject = {}
+
+for (let entry in sssssss) {
+    desireObject[entry] = sssssss[entry]
+}
+
+
+
+const Numberss = Math.min()
+console.log("min function", Numberss)
+
+
+const Numberss2 = Math.max()
+console.log("max function", Numberss2)
+
+const evenOddArray = [2, 1, 4, 5, 23, 3, 4]
+
+evenOddArray.forEach((Number) => {
+    if (Number & 0 !== 1) {
+        console.log('Odd')
+    }
+    else {
+        console.log('even')
+    }
+
+})
+
+
+const sorthis = [2, 55, 1, 4, 5, 23, 3, 4]
+
+for (var j = 0; j < sorthis.length; j++) {
+    for (var i = 0; i < sorthis.length; i++) {
+        if (sorthis[i] > sorthis[i + 1]) {
+            var temp = sorthis[i]
+            sorthis[i] = sorthis[i + 1]
+            sorthis[i + 1] = temp
+        }
+    }
+}
+
+console.log('sorted array', sorthis)
+
+
+const MaxNumberArray = [2, 55, 1, 100, 4, 5, 23, 3, 4]
+var maxNumber = 0
+for (var j = 0; j < MaxNumberArray.length; j++) {
+    if (MaxNumberArray[j] > maxNumber) {
+        maxNumber = MaxNumberArray[j]
+    }
+}
+
+console.log("Maximum Number", maxNumber)
+
+
+const secondHeighestArray = [2, 55, 334, 120, 4, 5, 23, 3, 100, 120, 333]
+
+var firstHeighestNumber = -Infinity
+var secondHeighestNumber = -Infinity
+
+for (var j = 0; j < secondHeighestArray.length; j++) {
+    if (secondHeighestArray[j] > firstHeighestNumber) {
+        secondHeighestNumber = firstHeighestNumber
+        firstHeighestNumber = secondHeighestArray[j]
+    }
+    else if (secondHeighestArray[j] < firstHeighestNumber && secondHeighestArray[j] > secondHeighestNumber) {
+        secondHeighestNumber = secondHeighestArray[j]
+    }
+}
+console.log('second Heightst Number', secondHeighestNumber)
+
+
+
+const LeftRightSum = [1, 2, 3, 4, 5, 1]
+var leftSideSum = 0
+for (var j = 0; j < LeftRightSum.length; j++) {
+    var RightSideSum = 0
+    leftSideSum = leftSideSum + LeftRightSum[j]
+    for (var i = j; i < LeftRightSum.length; i++) {
+
+        RightSideSum = RightSideSum + LeftRightSum[i]
+
+    }
+    if (leftSideSum == RightSideSum) {
+        console.log('this is number at both side equal', LeftRightSum[j])
+    }
+}
+
+
+
+const findAccurranceArray = [2, 55, 1, 4, 5, 23, 23, 3, 4]
+
+const accurrenceObjectContain = {}
+
+
+findAccurranceArray.forEach((value) => {
+
+    if (accurrenceObjectContain[value]) {
+        accurrenceObjectContain[value]++
+    } else {
+        accurrenceObjectContain[value] = 1
+    }
+
+})
+
+console.log('accurrence object', accurrenceObjectContain[23])
+
+
+
+const RemoveDuplicateArray = [2, 55, 1, 4, 5, 23, 23, 3, 4, 25, 4, 2]
+
+
+const RemovedDuplicated = RemoveDuplicateArray.filter((value, index, array) => {
+    return array.indexOf(value) == index
+})
+
+console.log('Removed Duplicate Number', RemovedDuplicated)
+
+
+var x = 10
+var y = 11
+x = x + y
+y = x - y
+x = x - y
+console.log('x value', x, 'y value', y)
+
+
+
+var MyString = "University  madam foodoof value ejaz ollo"
+MyString.split(' ').forEach((item) => {
+
+    var MyStringArray = item.split('')
+    var start = 0
+    var end = MyStringArray.length - 1
+    while (start < end) {
+        var temp = MyStringArray[start]
+        MyStringArray[start] = MyStringArray[end]
+        MyStringArray[end] = temp
+        start++
+        end--
+    }
+    if (MyStringArray.join("") == item) {
+        console.log('this is word which is same after reverse', item)
+    }
+})
+
+
+
+
+const faboniciSeries = [0, 1]
+
+
+function faboniciSeriesFunc(n) {
+
+    for (var i = 0; i < n; i++) {
+        faboniciSeries.push(faboniciSeries[i] + faboniciSeries[i + 1])
+    }
+
+}
+
+faboniciSeriesFunc(5)
+console.log('fabonici', faboniciSeries)
+
+
+var factorial = 5
+var factorialNumber = 1
+for (var i = 1; i <= factorial; i++) {
+    var factorialNumber = factorialNumber * i
+
+}
+console.log('factorial Number', factorialNumber)
+
+const Sortnumbers = [9, 2, 5, 1, 7, 4, 8, 3];
+const sortedNumbers = Sortnumbers.sort((a, b) => a - b);
+
+console.log(sortedNumbers); // This will display the sorted array in the console
+
+
+const SortedArray = [1, 2, 3, 4, 5, 7, 8, 9];
+const foundNumber = 9;
+let firstNum = 0;
+let lastNum = SortedArray.length - 1;
+
+for (var i = 0; i < SortedArray.length; i++) {
+    let midnumber = Math.floor((firstNum + lastNum) / 2);
+    console.log(SortedArray[midnumber]);
+
+    if (SortedArray[midnumber] === foundNumber) {
+        console.log('Number is Found:', SortedArray[midnumber]);
+        break; // Once found, exit the loop
+    } else if (SortedArray[midnumber] > foundNumber) {
+        lastNum = midnumber - 1;
+    } else {
+        firstNum = midnumber + 1;
+    }
+}
+
+function checkEvenLogestString(str) {
+    const evenArray = str.split(" ")
+    var evenLogestNumber = 0
+    var evenlogestString = ''
+    for (var i = 0; i < evenArray.length; i++) {
+        if (evenArray[i].length % 2 == 0) {
+            if (evenArray[i].length > evenLogestNumber) {
+                evenLogestNumber = evenArray[i].length
+                evenlogestString = evenArray[i]
+            }
+
+        }
+    }
+    return evenlogestString
+}
+
+
+
+const Stringggg = "yesterdayssss, i saw a dog that was hungry and thirsty asdasdfsd jamejazjam"
+var Resulted = checkEvenLogestString(Stringggg.replace(',', ' '))
+console.log("our Result", Resulted)
+
+
+
+function checkParadoline(StringPassing) {
+    if (StringPassing.length < 5) {
+        return 'This is not greater Than'
+    }
+    const StringPassingArray = StringPassing.split('')
+
+    start = 0
+    end = StringPassingArray.length - 1
+    while (start < end) {
+        temp = StringPassingArray[start]
+        StringPassingArray[start] = StringPassingArray[end]
+        StringPassingArray[end] = temp
+        start++
+        end--
+    }
+
+    if (StringPassingArray.join('') == StringPassing) {
+        return StringPassing
+    }
+    else {
+        return "This is not Paradroin"
+    }
+}
+
+const StringPassing = "foolsoof"
+console.log('this is paradorim', checkParadoline(StringPassing))
+
+
+const callFunc = () => {
+    console.log(this)
+}
+
+callFunc()
+
+
+const obj = {
+    name: "Ali",
+    display: function () {
+        console.log(this.name);
+    }
+};
+obj.display(); // Outputs: Ali
+
+
+var string = "Welcome to this Javascript Guide!";
+var stringArray = string.split(' ')
+
+const resultArrayString = stringArray.map((value) => {
+    var eactItemArray = value.split('')
+    start = 0
+    end = eactItemArray.length - 1
+    while (start < end) {
+        var temp = eactItemArray[start]
+        eactItemArray[start] = eactItemArray[end]
+        eactItemArray[end] = temp
+        start++
+        end--
+    }
+    return eactItemArray.join('')
+})
+
+console.log('this is resultArrayString', resultArrayString.join(' '))
+
+
+
+var capitcalString = "Welcome to this Javascript Guide!";
+var capitcalStringArray = capitcalString.split(' ')
+
+
+const capitalWord = capitcalStringArray.map((value) => {
+    return value.charAt(0).toUpperCase() + value.slice(1);
+})
+
+console.log('capatical', capitalWord.join(' '))
+
+
+
+
+const PrimeNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+PrimeNumber.forEach((Num) => {
+    if (Num <= 2) {
+        console.log(' Prime', Num)
+        return
+    }
+    var isPrime = true
+    for (var i = 2; i < Num; i++) {
+        if (Num % i == 0) {
+            isPrime = false
+        }
+    }
+    if (isPrime) {
+        console.log(Num + ' is a prime number');
+    }
+    else {
+        console.log(Num + ' is a Not prime number');
+    }
+})
+var count = 0
+function Repeat() {
+
+    count += 1
+    if (count <= 10) {
+        console.log(count)
+        Repeat()
+    }
+
+}
+
+
+Repeat()
+var count = 0
+var timer = setInterval(() => {
+
+    count += 1
+    if (count <= 10) {
+        console.log(count)
+    }
+    else {
+        clearInterval(timer)
+    }
+}, 0);
